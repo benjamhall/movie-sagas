@@ -25,7 +25,7 @@ function* rootSaga() {
 //         yield put({ type: 'SET_GENRES', payload: genres.data });
 
 //     }   catch {
-//             console.log('get all error');
+//             console.log('get all genres error');
 //     }
 // }
 
