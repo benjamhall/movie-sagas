@@ -12,7 +12,6 @@ function Details() {
             <h1>{details.title}</h1>
             <img src={details.poster}></img>
             <p>{details.description}</p>
-            
         </>
     )
 }
