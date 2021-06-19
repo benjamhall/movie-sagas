@@ -1,10 +1,14 @@
 import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {useState} from 'react';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
 function AddMovie() {
-
+    const dispatch = useDispatch();
+    let [newMovie, setNewMovie] = useState({title: '', url: '', description: ''})
+    
 
     return (
         <div>
@@ -28,6 +32,8 @@ function AddMovie() {
                     <MenuItem value={"Space-Opera"}>Space-Opera</MenuItem>
                     <MenuItem value={"Superhero"}>Superhero</MenuItem>
             </Select>
+                <Button type="submit" variant="contained" color="secondary">Cancel</Button>
+                <Button type="submit" variant="contained" color="secondary">Save</Button>
             </form>
 
 
@@ -36,4 +42,4 @@ function AddMovie() {
 
 }
 
-            export default AddMovie;
+export default AddMovie;
