@@ -11,9 +11,11 @@ function Details() {
     const genres = useSelector(store => store.genres)
     console.log('details are here', details)
 
+    // This function handles the button that brings the user back to the Movie List
     const handleBack = () => {
-        console.log('back button clicked')
 
+        console.log('back button clicked')
+        //routes the user back to Movie List
         history.push('/');
     }
 
