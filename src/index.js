@@ -29,8 +29,11 @@ function* rootSaga() {
 //     }
 // }
 
-const details = {state ={}, action} {
-    
+const details = (state = {}, action) => {
+    if(action.type === 'MOVIE_DETAILS') {
+        return action.payload;
+    }
+    return state;
 }
 
 function* fetchAllMovies() {
@@ -74,6 +77,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        details,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
