@@ -12,6 +12,11 @@ function MovieList() {
         //dispatch({ type: 'FETCH_GENRES' })
     }, []);
 
+    const goToDetails = (details) => {
+        console.log('The details are', details)
+        dispatch({type:})
+    }
+
     return (
         <main>
             <h1>MovieList</h1>
@@ -20,7 +25,7 @@ function MovieList() {
                     return (
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
+                            <img onClick={event => goToDetails(movie)} src={movie.poster} alt={movie.title} />
                         </div>
                     );
                 })}

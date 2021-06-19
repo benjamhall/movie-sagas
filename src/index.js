@@ -29,6 +29,10 @@ function* rootSaga() {
 //     }
 // }
 
+const details = {state ={}, action} {
+    
+}
+
 function* fetchAllMovies() {
     // get all movies from the DB
     try {
