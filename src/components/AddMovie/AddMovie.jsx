@@ -9,12 +9,17 @@ function AddMovie() {
     const dispatch = useDispatch();
     let [newMovie, setNewMovie] = useState({title: '', url: '', description: ''})
     
+    const postMovie = (newMovie) => {
+        console.log(title)
+        dispatch({type: 'POST_Movie', payload: {title: newMovie.title, url: newMovie.url, description: newMovie.description} })
+
+    }
 
     return (
         <div>
             <h1>Add Movie</h1>
-            <form>
-                <TextField id="outlined-basic" label="Movie Title" variant="outlined" />
+            <form onSubmit={ () => postMovie(newMovie)}>
+                <TextField value= {id="outlined-basic" label="Movie Title" variant="outlined" />
                 <TextField id="outlined-basic" label="Image URL" variant="outlined" />
                 <TextField id="outlined-basic" label="Movie Description" variant="outlined" />
                 <Select defaultValue="" id="demo-simple-select">
