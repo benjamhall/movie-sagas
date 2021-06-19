@@ -69,8 +69,9 @@ const genres = (state = [], action) => {
         case 'SET_GENRES':
             return action.payload;
         case 'FILTER_GENRES':
-            
-            return action.payload;
+            const matchGenre = genre => genre.title == action.payload
+            // filter out all objects in genre where title isn't 
+            return state.filter(matchGenre)
         default:
             return state;
     }

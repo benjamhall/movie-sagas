@@ -17,7 +17,7 @@ function MovieList() {
     const goToDetails = (details) => {
         console.log('The details are', details)
         dispatch({type: 'MOVIE_DETAILS', payload: details})
-        dispatch({type: 'FILTER_GENRES', payload: genres})
+        dispatch({type: 'FILTER_GENRES', payload: details.title})
         history.push('/details')
     }
 
