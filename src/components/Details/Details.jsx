@@ -1,6 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
+
 function Details() {
     
     const details = useSelector(store => store.details)

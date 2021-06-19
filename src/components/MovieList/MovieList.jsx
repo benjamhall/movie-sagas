@@ -11,12 +11,13 @@ function MovieList() {
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
-        //dispatch({ type: 'FETCH_GENRES' })
+        dispatch({ type: 'FETCH_GENRES' })
     }, []);
 
     const goToDetails = (details) => {
         console.log('The details are', details)
         dispatch({type: 'MOVIE_DETAILS', payload: details})
+        dispatch({type: 'FILTER_GENRES', payload: genres})
         history.push('/details')
     }
 
