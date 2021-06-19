@@ -14,7 +14,7 @@ function Details() {
     const handleBack = () => {
         console.log('back button clicked')
 
-        history.push('/')
+        history.push('/');
     }
 
     return (
