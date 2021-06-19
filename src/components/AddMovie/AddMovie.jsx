@@ -20,6 +20,13 @@ function AddMovie() {
                     <MenuItem value={"Comedy"}>Comedy</MenuItem>
                     <MenuItem value={"Disaster"}>Diaster</MenuItem>
                     <MenuItem value={"Drama"}>Drama</MenuItem>
+                    <MenuItem value={"Epic"}>Epic</MenuItem>
+                    <MenuItem value={"Fantasy"}>Fantasy</MenuItem>
+                    <MenuItem value={"Musical"}>Musical</MenuItem>
+                    <MenuItem value={"Romantic"}>Romantic</MenuItem>
+                    <MenuItem value={"Science Fiction"}>Science Fiction</MenuItem>
+                    <MenuItem value={"Space-Opera"}>Space-Opera</MenuItem>
+                    <MenuItem value={"Superhero"}>Superhero</MenuItem>
             </Select>
             </form>
 
