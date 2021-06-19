@@ -53,20 +53,20 @@ function AddMovie() {
                     id="outlined-basic" label="Movie Description" variant="outlined" />
 
                 <Select onChange={handleDropdown} defaultValue="" id="demo-simple-select" >
-                    <MenuItem value
+                    <MenuItem></MenuItem>
                     <MenuItem value={1}>Adventure</MenuItem>
                     <MenuItem value={2}>Animated</MenuItem>
                     <MenuItem value={3}>Biographical</MenuItem>
                     <MenuItem value={4}>Comedy</MenuItem>
                     <MenuItem value={5}>Diaster</MenuItem>
-                    <MenuItem value={"Drama"}>Drama</MenuItem>
-                    <MenuItem value={"Epic"}>Epic</MenuItem>
-                    <MenuItem value={"Fantasy"}>Fantasy</MenuItem>
-                    <MenuItem value={"Musical"}>Musical</MenuItem>
-                    <MenuItem value={"Romantic"}>Romantic</MenuItem>
-                    <MenuItem value={"Science Fiction"}>Science Fiction</MenuItem>
-                    <MenuItem value={"Space-Opera"}>Space-Opera</MenuItem>
-                    <MenuItem value={"Superhero"}>Superhero</MenuItem>
+                    <MenuItem value={5}>Drama</MenuItem>
+                    <MenuItem value={6}>Epic</MenuItem>
+                    <MenuItem value={7}>Fantasy</MenuItem>
+                    <MenuItem value={8}>Musical</MenuItem>
+                    <MenuItem value={9}>Romantic</MenuItem>
+                    <MenuItem value={10}>Science Fiction</MenuItem>
+                    <MenuItem value={11}>Space-Opera</MenuItem>
+                    <MenuItem value={12}>Superhero</MenuItem>
                 </Select>
 
                 <Button type="submit" variant="contained" color="secondary">Cancel</Button>
