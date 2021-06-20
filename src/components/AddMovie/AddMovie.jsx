@@ -36,7 +36,7 @@ function AddMovie() {
 
     const postMovie = () => {
         console.log(title)
-        dispatch({type: 'POST_Movie', payload: {title: title, poster: url, description: description, genre_id: genre} })
+        dispatch({type: 'POST_MOVIE', payload: {title: title, poster: url, description: description, genre_id: genre} })
     }
 
     return (
