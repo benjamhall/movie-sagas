@@ -18,6 +18,7 @@ function* rootSaga() {
     yield takeEvery('POST_MOVIE', postNewMovie)
 }
 
+// This function handles the Post Movie request from the Add Movie page and sends the info to the server
 function* postNewMovie (action) {
     try {
         const response = yield axios.post('/api/movie', action.payload)
@@ -28,8 +29,8 @@ function* postNewMovie (action) {
     }
 }
 
+// This function gets all the genres from the Database by sending the request to the server
 function* fetchAllGenres () {
-    //get all the generes from the DB
     try {
         const genres = yield axios.get('/api/genre');
         console.log('get all genres', genres.data);
@@ -40,6 +41,7 @@ function* fetchAllGenres () {
     }
 }
 
+// This reducer handles the Movie Details 
 const details = (state = {}, action) => {
     if(action.type === 'MOVIE_DETAILS') {
         return action.payload;
@@ -47,8 +49,8 @@ const details = (state = {}, action) => {
     return state;
 }
 
+// This function sends a get request to the server for all of the movies in the database
 function* fetchAllMovies() {
-    // get all movies from the DB
     try {
         const movies = yield axios.get('/api/movie');
         console.log('get all:', movies.data);

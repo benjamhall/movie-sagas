@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
+// This is a get request to the database for all of the genres for each particular movie.
 router.get('/', (req, res) => {
-  // Add query to get all genres
 
   const queryText = `SELECT movies.title, genres.name FROM "genres"
   JOIN "movies_genres" ON "genres".id = "movies_genres".genre_id
