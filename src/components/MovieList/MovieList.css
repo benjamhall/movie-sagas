@@ -1,11 +1,13 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    margin: 10px;
     
     
 }
 
 img {
     max-height: 274px;
-    max-width: 185;
+    max-width: 185px;
+    border: 1px solid black;
 }

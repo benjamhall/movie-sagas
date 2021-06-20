@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import './MovieList.css'
 
 // This function displays the 14 movies on the home page and has an onClick event that brings the user to the details page
@@ -44,6 +45,7 @@ function MovieList() {
             <section className="movies">
                 {movies.map(movie => {
                     return (
+                        
                         <div key={movie.id} >
                             <h3>{movie.title}</h3>
                             <img onClick={event => goToDetails(movie)} src={movie.poster} alt={movie.title} />
