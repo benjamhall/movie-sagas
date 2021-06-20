@@ -7,27 +7,36 @@ import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
+// This function handles the Add Movie page which includes 
 function AddMovie() {
     const dispatch = useDispatch();
     const history = useHistory();
-    //let [newMovie, setNewMovie] = useState({title: '', url: '', description: ''})
+    
     let [title, setTitle] = useState('')
     let [url, setUrl] = useState('')
     let [description, setDescription] = useState('')
     let [genre, setGenre] = useState('')
 
+    // This function handles the change of the title input
     const handleTitleChange = (event) => {
         console.log('title event')
+
+        // Sets the local state of setTitle to the value of the input
         setTitle(event.target.value)
     }
 
+    // This function handles the change of the url input
     const handleUrlChange = (event) => {
         console.log('url event')
+        // Sets the local state of setUrl to the value of the input
         setUrl(event.target.value)
     }
 
+    // This function handles the change of the description
     const handleDescriptionChange = (event) => {
         console.log('in handle Description')
+
+        // Sets the local state setDescription to the value of the input
         setDescription(event.target.value)
     }
 
@@ -37,14 +46,22 @@ function AddMovie() {
         setGenre(event.target.value)
     }
 
+    // This function handles the cancel button which upon click will bring the user back to the home page
     const handleCancel = () => {
         console.log('cancel button clicked')
+        
+        //Routes the user back to the home page
         history.push('/')
     }
 
+    // This function handles the save button and sends the information in the inputs and dropdown to the reducer
     const postMovie = () => {
         console.log(title)
+
+        // dispatches the information from the inputs and the dropdown. 
         dispatch({type: 'POST_MOVIE', payload: {title: title, poster: url, description: description, genre_id: genre} })
+
+        // sends the user back to the home page
         history.push('/')
     }
 
@@ -87,7 +104,7 @@ function AddMovie() {
 
 
         </div>
-            )
+ )
 
 }
 

@@ -3,10 +3,11 @@ import {useSelector} from 'react-redux';
 import Button from '@material-ui/core/Button';
 import {useHistory} from "react-router-dom";
 
-//This function 
+//This function shows the details of the movie that was clicked 
 function Details() {
     const history = useHistory();
     
+    // The useSelector gets the information from the reducer in the store which includes the details and the genres. 
     const details = useSelector(store => store.details)
     const genres = useSelector(store => store.genres)
     console.log('details are here', details)
@@ -15,6 +16,7 @@ function Details() {
     const handleBack = () => {
 
         console.log('back button clicked')
+
         //routes the user back to Movie List
         history.push('/');
     }
