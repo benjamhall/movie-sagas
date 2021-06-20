@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import {useState} from 'react';
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
