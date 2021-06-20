@@ -1,6 +1,11 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
-    max-height: 10px;
     
+    
+}
+
+img {
+    max-height: 274px;
+    max-width: 185;
 }
