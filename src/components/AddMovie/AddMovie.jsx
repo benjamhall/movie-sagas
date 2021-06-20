@@ -11,6 +11,7 @@ function AddMovie() {
     let [title, setTitle] = useState('')
     let [url, setUrl] = useState('')
     let [description, setDescription] = useState('')
+    let [genre, setGenre] = useState('')
 
     const handleTitleChange = (event) => {
         console.log('title event')
@@ -23,15 +24,17 @@ function AddMovie() {
     }
 
     const handleDescriptionChange = (event) => {
+        console.log('in handle Description')
         setDescription(event.target.value)
     }
 
-    const handleDropdown = (event) => {
-        console.log('handle dropdown')
-        setDropdown(event.target.value)
+    // This function handles the selection of the genre in the dropdown and sets the genre equal to that value
+    const handleGenre = (event) => {
+        console.log('in handle genre')
+        setGenre(event.target.value)
     }
 
-    const postMovie = (newMovie) => {
+    const postMovie = () => {
         console.log(title)
         dispatch({type: 'POST_Movie', payload: {title: title, poster: url, description: description, genre_id: genre} })
     }
@@ -52,7 +55,7 @@ function AddMovie() {
                     onChange={handleDescriptionChange}
                     id="outlined-basic" label="Movie Description" variant="outlined" />
 
-                <Select onChange={handleDropdown} defaultValue="" id="demo-simple-select" >
+                <Select onChange={handleGenre} defaultValue="" id="demo-simple-select" >
                     <MenuItem></MenuItem>
                     <MenuItem value={1}>Adventure</MenuItem>
                     <MenuItem value={2}>Animated</MenuItem>
