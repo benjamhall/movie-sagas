@@ -1,4 +1,6 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    max-height: 10px;
+    
 }
