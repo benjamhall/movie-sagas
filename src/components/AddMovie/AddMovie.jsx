@@ -1,12 +1,15 @@
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {useState} from 'react';
+import { useHistory } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
 function AddMovie() {
     const dispatch = useDispatch();
+    const history = useHistory();
     //let [newMovie, setNewMovie] = useState({title: '', url: '', description: ''})
     let [title, setTitle] = useState('')
     let [url, setUrl] = useState('')
@@ -34,9 +37,15 @@ function AddMovie() {
         setGenre(event.target.value)
     }
 
+    const handleCancel = () => {
+        console.log('cancel button clicked')
+        history.push('/')
+    }
+
     const postMovie = () => {
         console.log(title)
         dispatch({type: 'POST_MOVIE', payload: {title: title, poster: url, description: description, genre_id: genre} })
+        history.push('/')
     }
 
     return (
@@ -56,7 +65,7 @@ function AddMovie() {
                     id="outlined-basic" label="Movie Description" variant="outlined" />
 
                 <Select onChange={handleGenre} defaultValue="" id="demo-simple-select" >
-                    <MenuItem></MenuItem>
+                    <MenuItem value={0}></MenuItem>
                     <MenuItem value={1}>Adventure</MenuItem>
                     <MenuItem value={2}>Animated</MenuItem>
                     <MenuItem value={3}>Biographical</MenuItem>
@@ -72,8 +81,8 @@ function AddMovie() {
                     <MenuItem value={12}>Superhero</MenuItem>
                 </Select>
 
-                <Button type="submit" variant="contained" color="secondary">Cancel</Button>
-                <Button type="submit" variant="contained" color="secondary">Save</Button>
+                <Button onClick={handleCancel} type="submit" variant="contained" color="secondary">Cancel</Button>
+                <Button onClick={postMovie} type="submit" variant="contained" color="secondary">Save</Button>
             </form>
 
 
