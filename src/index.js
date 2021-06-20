@@ -18,11 +18,11 @@ function* rootSaga() {
     yield takeEvery('POST_MOVIE', postNewMovie)
 }
 
-function* postNewMovie () {
+function* postNewMovie (action) {
     try {
         const response = yield axios.post('/api/movie', action.payload)
         console.log(response.data);
-        yield put({ type: 'SET_MOVIES', payload: movies.data });
+        yield put({ type: 'FETCH_MOVIES' });
     } catch (error) {
         console.log('error in post New Movie generator', error);
     }

@@ -82,7 +82,7 @@ function AddMovie() {
                 </Select>
 
                 <Button onClick={handleCancel} type="submit" variant="contained" color="secondary">Cancel</Button>
-                <Button onClick={postMovie} type="submit" variant="contained" color="secondary">Save</Button>
+                <Button type="submit" variant="contained" color="secondary">Save</Button>
             </form>
 
 
