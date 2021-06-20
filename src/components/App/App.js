@@ -4,6 +4,7 @@ import MovieList from '../MovieList/MovieList';
 import Details from '../Details/Details';
 import AddMovie from '../AddMovie/AddMovie';
 
+//This function displays the Routes to the different pages of the app
 
 function App() {
 

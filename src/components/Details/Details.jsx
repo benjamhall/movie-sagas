@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 import Button from '@material-ui/core/Button';
 import {useHistory} from "react-router-dom";
 
-
+//This function 
 function Details() {
     const history = useHistory();
     
